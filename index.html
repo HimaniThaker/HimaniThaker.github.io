@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Himani Thaker, Senior C#/.NET software engineer in Cambridge, UK. Enterprise applications in ASP.NET, SQL Server and REST APIs.">
+<meta property="og:title" content="Himani Thaker | Senior .NET Developer">
+<meta property="og:description" content="Senior C#/.NET software engineer with 7+ years building enterprise applications. Cambridge, UK.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2321409a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='Georgia'%3EHT%3C/text%3E%3C/svg%3E">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Himani Thaker | Senior .NET Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Caveat:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one long graph-paper notebook page. Left margin column = dates + red-pen notes; right = lab entries (Aim / Method / Results). Taped-in specimen cards for numbers and one pencil sketch. */
+:root{
+  --paper:#f6f8f5; --grid:#d5e3ea; --grid-strong:#bcd2de;
+  --text:#23262e; --ink:#21409a; --pencil:#626a78; --red:#c4372c;
+  --hi:#fff09a; --tape:rgba(214,203,160,.62); --card:#ffffff; --photo-bg:#dbe6ef;
+  --f-hand:"Kalam", "Segoe Print", "Comic Sans MS", cursive;
+  --f-note:"Caveat", "Segoe Print", cursive;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#131921; --grid:#1c2733; --grid-strong:#243344; --text:#e3e7ee; --ink:#93b2ff; --pencil:#9aa3b2; --red:#ff7d6e;
+  --hi:#5b5115; --tape:rgba(150,140,100,.35); --card:#1a222d; --photo-bg:#2a3b52; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#131921; --grid:#1c2733; --grid-strong:#243344; --text:#e3e7ee; --ink:#93b2ff; --pencil:#9aa3b2; --red:#ff7d6e;
+  --hi:#5b5115; --tape:rgba(150,140,100,.35); --card:#1a222d; --photo-bg:#2a3b52; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  color:var(--text);font-family:var(--f-body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.book{max-width:1040px;margin:0 auto;padding-block:40px 80px}
+h1,h2,h3{font-family:var(--f-hand);color:var(--ink);margin:0;line-height:1.15;text-wrap:balance;font-weight:700}
+p{margin:0}
+a{color:var(--ink)}
+:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+mark{background:linear-gradient(transparent 35%,var(--hi) 35%,var(--hi) 88%,transparent 88%);color:inherit;padding:0 2px}
+.note{font-family:var(--f-note);color:var(--red);font-size:1.35rem;line-height:1.15}
+
+/* the margin system */
+.sheet{display:grid;grid-template-columns:170px minmax(0,1fr);gap:0 36px;position:relative}
+.sheet::before{content:"";position:absolute;top:0;bottom:0;left:186px;width:2px;background:var(--red);opacity:.55}
+.margin{display:flex;flex-direction:column;gap:10px;padding-top:6px;text-align:right}
+.body{min-width:0}
+@media (max-width:760px){
+  .sheet{grid-template-columns:1fr;gap:12px}
+  .sheet::before{display:none}
+  .margin{text-align:left;flex-direction:row;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-left:2px solid var(--red);padding-left:12px}
+}
+
+/* cover */
+.cover{padding-block:20px 56px}
+.label{position:relative;display:inline-grid;gap:10px;background:var(--card);padding:28px 32px 26px;border:1.5px solid var(--ink);border-radius:6px;max-width:100%;transform:rotate(-1.2deg);box-shadow:4px 5px 0 var(--grid-strong)}
+.label::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;margin-left:-55px;background:var(--tape);transform:rotate(3deg)}
+.label .kicker{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pencil)}
+.label h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1}
+.label .who{font-family:var(--f-hand);font-size:1.3rem;color:var(--text)}
+.label .rule{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-family:var(--f-mono);font-size:.82rem;color:var(--pencil);margin-top:4px}
+.label .rule b{font-family:var(--f-hand);font-weight:400;font-size:1.05rem;color:var(--ink);border-bottom:1px solid var(--grid-strong)}
+.portrait{position:absolute;top:24px;right:28px;width:clamp(92px,19vw,180px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;background:var(--photo-bg);border:3px solid var(--card);box-shadow:0 0 0 1.5px var(--ink)}
+.label .kicker,.label h1,.label .who{padding-right:calc(clamp(92px,19vw,180px) + 16px)}
+@media (max-width:600px){
+  .portrait{top:18px;right:16px}
+}
+.abstract{display:grid;gap:12px;max-width:68ch}
+.abstract h2{font-size:1.5rem}
+.intro{font-size:1.1rem;line-height:1.6}
+.keywords{font-family:var(--f-mono);font-size:.82rem;color:var(--ink);line-height:1.7;padding-top:10px;border-top:1px solid var(--grid-strong)}
+.keywords span{color:var(--red);text-transform:uppercase;letter-spacing:.12em;margin-right:8px}
+
+/* index */
+.index{padding-block:8px 48px}
+.index h2{font-size:1.8rem;margin-bottom:12px}
+.index ol{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-width:640px}
+.index a{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:baseline;text-decoration:none;color:var(--text);padding:4px 0}
+.index a .n{font-family:var(--f-mono);color:var(--red);font-size:.85rem}
+.index a .t{font-family:var(--f-hand);font-size:1.15rem;color:var(--ink);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.index a .t::after{content:" ...................................................................................................";color:var(--grid-strong)}
+.index a .y{font-family:var(--f-mono);font-size:.82rem;color:var(--pencil);font-variant-numeric:tabular-nums}
+.index a:hover .t{text-decoration:underline}
+
+/* entries */
+.entry{padding-block:44px;border-top:1.5px dashed var(--grid-strong)}
+.stamp{font-family:var(--f-mono);font-size:.8rem;color:var(--pencil);font-variant-numeric:tabular-nums}
+.stamp b{display:block;font-size:1.6rem;color:var(--red);font-weight:600;line-height:1}
+.entry h2{font-size:clamp(1.6rem,3.4vw,2.15rem)}
+.entry .where{font-family:var(--f-mono);font-size:.8rem;color:var(--pencil);margin-top:6px}
+.lab{display:grid;gap:18px;margin-top:22px}
+.lab section{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px}
+.lab h3{font-size:1.05rem;color:var(--red);font-weight:700;padding-top:2px}
+.lab ul{margin:0;padding-left:1.1em;display:grid;gap:6px;max-width:68ch}
+.lab li::marker{content:"– ";color:var(--ink)}
+@media (max-width:520px){.lab section{grid-template-columns:1fr;gap:4px}}
+
+/* result specimen */
+.result{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px}
+.result .big{font-family:var(--f-hand);font-size:2.8rem;color:var(--ink);line-height:1;font-weight:700}
+.result .bar{flex:1 1 220px;max-width:340px;display:grid;gap:4px}
+.result .track{height:14px;border:1.5px solid var(--ink);border-radius:2px;position:relative;background:repeating-linear-gradient(135deg,transparent 0 5px,var(--grid-strong) 5px 7px)}
+.result .fill{position:absolute;inset:0 auto 0 0;background:var(--ink);opacity:.85}
+.result small{font-family:var(--f-mono);font-size:.72rem;color:var(--pencil)}
+
+/* taped card + sketch */
+.taped{position:relative;background:var(--card);border:1px solid var(--grid-strong);border-radius:4px;padding:22px 22px 18px;margin-top:22px;box-shadow:3px 4px 0 var(--grid-strong)}
+.taped::before,.taped::after{content:"";position:absolute;top:-12px;width:70px;height:24px;background:var(--tape)}
+.taped::before{left:18px;transform:rotate(-6deg)}
+.taped::after{right:18px;transform:rotate(5deg)}
+.taped .cap{font-family:var(--f-note);font-size:1.25rem;color:var(--pencil);margin-top:8px}
+.sketch{overflow-x:auto}
+.sketch svg{display:block;width:100%;min-width:520px;height:auto}
+.sketch text{font-family:var(--f-hand);fill:var(--ink)}
+.sketch .box{fill:none;stroke:var(--ink);stroke-width:1.6}
+.sketch .arrow{fill:none;stroke:var(--pencil);stroke-width:1.4}
+.sketch .db{fill:var(--paper);stroke:var(--red);stroke-width:1.6}
+.sketch .red{fill:var(--red)}
+
+/* specimen sheet */
+.specimens{display:grid;gap:14px}
+.spec-row{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr) 58px;gap:14px;align-items:center}
+.spec-row .lbl{font-size:.92rem;line-height:1.3}
+.spec-row .lbl small{display:block;font-family:var(--f-mono);font-size:.7rem;color:var(--pencil)}
+.spec-row .track{height:18px;border:1.5px solid var(--ink);position:relative;background:repeating-linear-gradient(135deg,transparent 0 5px,var(--grid-strong) 5px 7px)}
+.spec-row .fill{position:absolute;inset:0 auto 0 0;background:var(--ink);opacity:.85}
+.spec-row .v{font-family:var(--f-hand);font-weight:700;font-size:1.35rem;color:var(--red);text-align:right}
+.spec-axis{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr) 58px;gap:14px;font-family:var(--f-mono);font-size:.7rem;color:var(--pencil)}
+.spec-axis span:nth-child(2){display:flex;justify-content:space-between}
+@media (max-width:560px){.spec-row,.spec-axis{grid-template-columns:minmax(0,1fr) 50px}.spec-row .lbl{grid-column:1/-1}.spec-axis span:first-child{display:none}}
+
+/* kit list */
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px 32px;margin-top:20px}
+.kit h3{font-size:1.15rem;margin-bottom:8px}
+.kit ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.kit li{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
+.kit li::before{content:"✓";font-family:var(--f-hand);color:var(--ink);font-weight:700;width:14px;flex:none}
+.kit li.part::before{content:"~";color:var(--pencil)}
+.kit .legend{grid-column:1/-1;font-family:var(--f-mono);font-size:.75rem;color:var(--pencil)}
+
+/* return-to */
+.return{margin-top:20px;display:grid;gap:14px;max-width:560px;background:var(--card);border:1.5px solid var(--ink);border-radius:6px;padding:24px;transform:rotate(.6deg)}
+.return .lines{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;align-items:baseline}
+.return .k{font-family:var(--f-mono);font-size:.75rem;color:var(--pencil);text-transform:uppercase;letter-spacing:.1em}
+.return .v{font-family:var(--f-hand);font-size:1.2rem;color:var(--ink);border-bottom:1px solid var(--grid-strong);overflow-wrap:anywhere;user-select:all}
+.return .v a{text-decoration:none}
+.btn{justify-self:start;font-family:var(--f-mono);font-size:.82rem;padding:9px 14px;border-radius:4px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--paper)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="book">
+
+  <!-- COVER -->
+  <div class="sheet cover">
+    <div class="margin"><span class="note">vol. 1<br>2017 → now</span></div>
+    <div class="body" style="display:grid;gap:28px">
+      <div class="label">
+        <img class="portrait" src="himani-portrait.png" alt="Himani Thaker" width="480" height="480">
+        <span class="kicker">Engineering notebook</span>
+        <h1>Built to Perform</h1>
+        <span class="who">Himani Thaker · Senior .NET Developer</span>
+        <div class="rule">
+          <span>Subject</span><b>Enterprise C#, ASP.NET &amp; SQL Server</b>
+          <span>Station</span><b>Cambridge, UK</b>
+          <span>Period</span><b>Sep 2017 – present</b>
+        </div>
+      </div>
+      <div class="abstract">
+        <h2>Abstract</h2>
+        <p class="intro">Senior C#/.NET software engineer with 7+ years building and supporting enterprise applications in aviation, engineering and education. Strong in ASP.NET, SQL Server, REST APIs and object-oriented design (SOLID, dependency injection), across the full delivery life cycle from analysis and design to testing, implementation and production support.</p>
+        <p class="intro">Led a team of 3–5 on the Ground Operations &amp; Support Systems project at Singapore Changi Airport, and mentored junior developers through code reviews at Genpact. M.Sc. in Artificial Intelligence.</p>
+        <p class="keywords"><span>Keywords</span> C# · ASP.NET MVC · ASP.NET Web API · .NET Core · SQL Server · EF Core · microservices · Azure DevOps</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDEX -->
+  <div class="sheet index">
+    <div class="margin"><span class="note">contents</span></div>
+    <div class="body">
+      <h2>Index</h2>
+      <ol id="index"></ol>
+    </div>
+  </div>
+
+  <div id="entries"></div>
+
+  <!-- SPECIMENS -->
+  <div class="sheet entry" id="specimens">
+    <div class="margin"><span class="stamp"><b>S</b>specimen sheet</span><span class="note">same method,<br>every job:<br>measure first</span></div>
+    <div class="body">
+      <h2>Specimen sheet: measured speed-ups</h2>
+      <p class="where">Time remaining after optimisation, against the original at 100. All figures approximate, as on the CV.</p>
+      <div class="taped">
+        <div class="specimens" id="specRows"></div>
+        <p class="cap">ink = time left · hatching = time removed</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KIT -->
+  <div class="sheet entry" id="kit">
+    <div class="margin"><span class="stamp"><b>K</b>equipment</span></div>
+    <div class="body">
+      <h2>Kit list</h2>
+      <div class="kit">
+        <div><h3>Languages &amp; design</h3><ul><li>C#</li><li>T-SQL</li><li>JavaScript</li><li>VB.NET</li><li>Python</li><li>Bash</li><li>OOD, SOLID, dependency injection</li></ul></div>
+        <div><h3>Frameworks</h3><ul><li>ASP.NET Web API</li><li>ASP.NET MVC</li><li>.NET Core</li><li>Entity Framework Core, LINQ</li><li>async/await, REST, microservices</li><li>AngularJS</li></ul></div>
+        <div><h3>Databases</h3><ul><li>SQL Server</li><li>Stored procedures, functions, views</li><li>Indexes, partitioned tables</li><li>Query optimisation</li></ul></div>
+        <div><h3>Delivery</h3><ul><li>Git, GitHub</li><li>Azure DevOps CI/CD</li><li>Agile, full SDLC, ALM</li><li>Unit testing, SIT, Postman</li><li>Code review, production support</li></ul></div>
+        <div><h3>Cloud &amp; automation</h3><ul><li class="part">AWS CloudFormation</li><li class="part">Terraform</li><li class="part">Ansible playbooks</li></ul></div>
+        <div><h3>AI (M.Sc.)</h3><ul><li>PyTorch, TensorFlow</li><li>Hugging Face</li><li>Computer vision</li><li>LLM APIs, RAG</li></ul></div>
+        <p class="legend">✓ used in production or study &nbsp;·&nbsp; ~ working knowledge</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="sheet entry" id="pubs">
+    <div class="margin"><span class="stamp"><b>P</b>publications</span><span class="note">began with CV<br>experiments<br>in 2020 ↑</span></div>
+    <div class="body">
+      <h2>Publications &amp; education</h2>
+      <div class="lab">
+        <section><h3>Paper</h3><div><p><mark><i>AEye: A Context-Aware Assistive Vision System for Visually Impaired Users</i></mark></p><p style="color:var(--pencil);margin-top:4px">Lead author. Accepted by IEEE CIBCB for IEEE Xplore consideration.</p></div></section>
+        <section><h3>M.Sc.</h3><p>Artificial Intelligence · Anglia Ruskin University, Cambridge, UK · Sep 2024 – Sep 2025</p></section>
+        <section><h3>B.Sc.</h3><p>Information Technology · Saurashtra University, Rajkot, India · Jun 2014 – Mar 2017</p></section>
+      </div>
+    </div>
+  </div>
+
+  <!-- RETURN TO -->
+  <div class="sheet entry" id="contact">
+    <div class="margin"><span class="note">if found…</span></div>
+    <div class="body">
+      <h2>If found, please return to</h2>
+      <div class="return">
+        <div class="lines">
+          <span class="k">Name</span><span class="v">Himani Thaker</span>
+          <span class="k">Email</span><span class="v" id="email">himanithaker025@gmail.com</span>
+          <span class="k">Profile</span><span class="v"><a href="https://www.linkedin.com/in/himani-thaker/" target="_blank" rel="noopener">linkedin.com/in/himani-thaker</a></span>
+          <span class="k">Based</span><span class="v">Cambridge, UK</span>
+        </div>
+        <button class="btn" id="copyBtn" type="button">Copy email</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const entries = [
+  {id:"e1", n:"01", org:"Infinity Infoway Pvt. Ltd.", role:"Junior ASP.NET Developer", where:"India", dates:"Sep 2017 – Jul 2020", yr:"2017",
+   title:"Building to the client's spec",
+   aim:"Deliver ASP.NET MVC applications for university and enterprise clients, engineered to exact client specifications.",
+   method:["ASP.NET MVC with front-end pages in HTML5, CSS3, JavaScript and jQuery.","SQL queries and stored procedures; implemented, tested and debugged each feature.","Worked directly with clients to understand needs and report progress."],
+   results:["Production-ready modules aligned with client requirements.","Explained to a non-technical client why errors kept happening, traced the cause to numerous hard-coded fixes and resolved the underlying issue.","Gave informal probation and review feedback to interns.","Recognised as Employee of the Month multiple times."],
+   note:"lesson: a pile of<br>hard-coded fixes is<br>a bug of its own"},
+  {id:"e2", n:"02", org:"Belief Technolab", role:"Software Developer", where:"India", dates:"Aug 2020 – Feb 2021", yr:"2020",
+   title:"Removing database bottlenecks",
+   aim:"Find and remove the database execution bottlenecks slowing the application down.",
+   method:["Refactored SQL queries, stored procedures and server-side logic.","System Integration Testing across integrated modules before each release.","Cleaned and transformed client datasets for model training; supported computer vision experiments."],
+   results:["Average query processing time down by about 35%."],
+   cut:35, note:"first contact with<br>computer vision →<br>see M.Sc."},
+  {id:"e3", n:"03", org:"Teamware Solutions (TCS project)", role:"ASP.NET Developer (Lead Developer)", where:"India, for Singapore Changi Airport", dates:"May 2021 – Aug 2022", yr:"2021",
+   title:"Ground operations at Changi Airport",
+   aim:"Backend and database development for the Ground Operations & Support Systems (GOPS) project at Singapore Changi Airport.",
+   method:["Backend modules in ASP.NET MVC and C# for cargo flight arrivals, baggage handling, operational milestones and ground activity coordination.","SQL Server stored procedures, functions and views; created and optimised partitioned tables.","Azure DevOps for CI/CD, GitHub for source control.","Unit testing and System Integration Testing."],
+   results:["Query performance on operational data improved by about 50%.","Fault-tolerant deployments, stable under peak operational loads.","Led a team of 3–5, stepping up as lead developer: assigning tasks and coordinating development activities, task delivery and timelines in an Agile environment."],
+   cut:50, sketch:true, note:"live airport data.<br>partitioning<br>paid off"},
+  {id:"e4", n:"04", org:"Genpact", role:"Consultant (Band 4A)", where:"India", dates:"Oct 2022 – Sep 2024", yr:"2022",
+   title:"Product configuration for ABB and Wabtec",
+   aim:"Core backend for a product configuration platform for ABB electronic products, and Web APIs for Wabtec.",
+   method:["Backend microservices designed with SOLID and dependency injection so each service stays focused.","Async Web APIs with EF Core and LINQ.","Automated configuration workflows with VB.NET, C#, Rulestream, SQL Server and REST APIs; Git and GitHub.","One-to-one code reviews and knowledge-sharing sessions with junior developers; onboarding, interviewing, line management and intern feedback."],
+   results:["Average endpoint execution time down by about 40%.","Report query times down by about 45%.","Critical production defects resolved with rapid hotfixes.","Recognised with the Excellence in Development Award 2024 for quality delivery, performance optimisation and production support."],
+   cut:45, cut2:40, note:"ABB + Wabtec<br>at the same time"},
+  {id:"e5", n:"05", org:"Freelance", role:"Freelance Developer", where:"UK", dates:"Oct 2025 – present", yr:"2025",
+   title:"Client web applications",
+   aim:"Turn clients' business and functional needs into web applications and development plans.",
+   method:["C#, ASP.NET MVC and .NET Core with SOLID and dependency injection.","Responsive front ends in HTML5, CSS3, JavaScript and jQuery over async REST APIs structured as lightweight microservices.","SQL Server structures, stored procedures and query tuning; Git and GitHub."],
+   results:["Response times improved by about 30%.","Deployment support, post-delivery enhancements and issue resolution."],
+   cut:30, note:"entry still open"}
+];
+
+const esc = s => s;
+const sketch = `<div class="taped sketch"><svg viewBox="0 0 640 250" role="img" aria-label="Sketch of the GOPS backend: four modules feed ASP.NET MVC and C#, which reads and writes partitioned SQL Server tables">
+  <g>
+    <rect class="box" x="14" y="18" width="132" height="44" rx="4" transform="rotate(-1 80 40)"/><text x="80" y="46" text-anchor="middle" font-size="16">cargo arrivals</text>
+    <rect class="box" x="168" y="16" width="132" height="44" rx="4" transform="rotate(1 234 38)"/><text x="234" y="44" text-anchor="middle" font-size="16">baggage</text>
+    <rect class="box" x="322" y="18" width="140" height="44" rx="4" transform="rotate(-.8 392 40)"/><text x="392" y="46" text-anchor="middle" font-size="16">milestones</text>
+    <rect class="box" x="484" y="16" width="142" height="44" rx="4" transform="rotate(1.2 555 38)"/><text x="555" y="44" text-anchor="middle" font-size="16">ground activity</text>
+    <path class="arrow" d="M80 64 C 120 90, 250 92, 300 112"/><path class="arrow" d="M234 62 C 250 86, 290 96, 310 112"/><path class="arrow" d="M392 64 C 380 88, 345 98, 330 112"/><path class="arrow" d="M555 62 C 500 92, 380 96, 340 112"/>
+    <rect class="box" x="230" y="112" width="180" height="42" rx="4" transform="rotate(-.6 320 133)"/><text x="320" y="139" text-anchor="middle" font-size="17">ASP.NET MVC · C#</text>
+    <path class="arrow" d="M320 156 L 320 182"/><path class="arrow" d="M313 174 L 320 184 L 327 174"/>
+    <ellipse class="db" cx="320" cy="192" rx="92" ry="9"/><path class="db" d="M228 192 L228 228 A92 9 0 0 0 412 228 L412 192"/><ellipse class="db" cx="320" cy="192" rx="92" ry="9"/>
+    <text x="320" y="218" text-anchor="middle" font-size="16">SQL Server</text>
+    <text x="436" y="214" font-size="17" class="red" style="fill:var(--red)">← partitioned tables,</text>
+    <text x="450" y="234" font-size="17" style="fill:var(--red)">procs, views: −50%</text>
+  </g></svg><p class="cap">GOPS backend, sketched</p></div>`;
+
+const host = document.getElementById("entries");
+const idx = document.getElementById("index");
+entries.forEach(e => {
+  const left = e.cut ? 100 - e.cut : null;
+  const res = e.cut ? `<div class="result"><span class="big">−${e.cut}%</span><div class="bar"><div class="track" role="img" aria-label="time left ${left} of 100"><div class="fill" style="width:${left}%"></div></div><small>${e.cut2 ? "report queries; endpoints −" + e.cut2 + "%" : "time left after the change, original = 100"}</small></div></div>` : "";
+  host.insertAdjacentHTML("beforeend", `
+  <div class="sheet entry" id="${e.id}">
+    <div class="margin"><span class="stamp"><b>${e.n}</b>${e.dates}</span><span class="note">${e.note}</span></div>
+    <div class="body">
+      <h2>${e.title}</h2>
+      <p class="where">${e.role} · ${e.org} · ${e.where}</p>
+      <div class="lab">
+        <section><h3>Aim</h3><p>${e.aim}</p></section>
+        <section><h3>Method</h3><ul>${e.method.map(m => `<li>${m}</li>`).join("")}</ul></section>
+        <section><h3>Results</h3><div style="display:grid;gap:12px">${res}<ul>${e.results.map(r => `<li>${r}</li>`).join("")}</ul></div></section>
+      </div>
+      ${e.sketch ? sketch : ""}
+    </div>
+  </div>`);
+  idx.insertAdjacentHTML("beforeend", `<li><a href="#${e.id}"><span class="n">${e.n}</span><span class="t">${e.title}</span><span class="y">${e.yr}</span></a></li>`);
+});
+[["#specimens","S","Specimen sheet","—"],["#kit","K","Kit list","—"],["#pubs","P","Publications & education","2024"],["#contact","R","Return to","—"]]
+  .forEach(([h,n,t,y]) => idx.insertAdjacentHTML("beforeend", `<li><a href="${h}"><span class="n">${n}</span><span class="t">${t}</span><span class="y">${y}</span></a></li>`));
+
+const specs = [
+  ["Operational data queries","Changi GOPS · 2021",50],["Report queries","Genpact · 2022–24",45],["API endpoints","Genpact (Wabtec) · 2022–24",40],
+  ["Query processing","Belief Technolab · 2020",35],["App response times","Freelance · 2025",30]];
+const sr = document.getElementById("specRows");
+specs.forEach(([l,s,c]) => sr.insertAdjacentHTML("beforeend",
+  `<div class="spec-row"><div class="lbl">${l}<small>${s}</small></div><div class="track" role="img" aria-label="${l}: about ${c}% faster"><div class="fill" style="width:${100-c}%"></div></div><div class="v">−${c}%</div></div>`));
+sr.insertAdjacentHTML("beforeend", `<div class="spec-axis"><span></span><span><i>0</i><i>50</i><i>100</i></span><span></span></div>`);
+
+const copyBtn = document.getElementById("copyBtn");
+copyBtn.addEventListener("click", () => {
+  const el = document.getElementById("email");
+  const done = () => { copyBtn.textContent = "Copied"; setTimeout(() => copyBtn.textContent = "Copy email", 1800); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent = "Press Ctrl+C"; };
+  try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+
+</body>
+</html>
